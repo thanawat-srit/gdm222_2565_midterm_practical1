@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Fractal : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Fractal : MonoBehaviour
 
     void Start()
     {
-        CreateSponge(iteration, Vector3.zero, size);
+        CreateSponge(iteration, Vector3.zero, (size*(float)Math.Pow(3,iteration))/3);
     }
 
     void CreateSponge(int level, Vector3 center, float size)
